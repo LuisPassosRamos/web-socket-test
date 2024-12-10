@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+service ProductCatalog {
+    
+    rpc GetProductByName(ProductRequest) returns (ProductResponse);
+    
+    rpc GetProductsByPrice(PriceRequest) returns (ProductList);
+
+    rpc UpdateProductStock(UpdateStockRequest) returns (UpdateResponse);
+}
+
+message ProductRequest {
+    string name = 1;
+}
+
+message PriceRequest {
+    float max_price = 1;
+}
+
+message UpdateStockRequest {
+    string name = 1;
+    int32 new_stock = 2;
+}
+
+message Product {
+    string name = 1;
+    float price = 2;
+    int32 stock = 3;
+}
+
+message ProductResponse {
+    Product product = 1;
+}
+
+message ProductList {
+    repeated Product products = 1;
+}
+
+message UpdateResponse {
+    string message = 1;
+}
