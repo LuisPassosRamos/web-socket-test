@@ -6,7 +6,7 @@ import service_pb2_grpc
 class ProductCatalogServicer(service_pb2_grpc.ProductCatalogServicer):
     def __init__(self):
         self.products = {
-            "Apple": {"price": 1.5, "stock": 100},
+            "Maça": {"price": 1.5, "stock": 100},
             "Banana": {"price": 0.5, "stock": 200}
         }
 

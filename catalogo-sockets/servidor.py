@@ -2,9 +2,9 @@ import socket
 import json
 
 products = {
-    "Apple": {"price": 1.5, "stock": 100},
+    "Maça": {"price": 1.5, "stock": 100},
     "Banana": {"price": 0.5, "stock": 200},
-    "Orange": {"price": 0.8, "stock": 150},
+    "Laranja": {"price": 0.8, "stock": 150},
 }
 
 def handle_request(request):
